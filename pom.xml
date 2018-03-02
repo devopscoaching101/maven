@@ -169,8 +169,8 @@
     <distributionManagement>
     <snapshotRepository>
         <id>snapshots</id>
-        <name>crevise-snapshots</name>
-        <url>https://crevise.jfrog.io/crevise/ext-snapshot-local</url>
+        <name>test-snapshots</name>
+        <url>https://test.jfrog.io/test/ext-snapshot-local</url>
     </snapshotRepository>
     </distributionManagement>
 
