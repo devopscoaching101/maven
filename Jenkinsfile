@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh '''
  
-sh "mvn -Dmaven.test.failure.ignore clean package"'''
+mvn -Dmaven.test.failure.ignore clean package'''
       }
     }
   }
