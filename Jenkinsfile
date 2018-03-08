@@ -2,9 +2,18 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      steps {
-        sh '''
+      parallel {
+        stage('Build') {
+          steps {
+            sh '''
 mvn -Dmaven.test.failure.ignore clean package'''
+          }
+        }
+        stage('parallel') {
+          steps {
+            sh 'echo "parallel step"'
+          }
+        }
       }
     }
     stage('Test') {
