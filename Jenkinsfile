@@ -3,7 +3,10 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh ' sh "\'${mvnHome}/bin/mvn\' -Dmaven.test.failure.ignore clean package"'
+        sh '''def mvnhome
+mvnHome = tool \'mvn3.5.2\'
+ 
+sh "\'${mvnHome}/bin/mvn\' -Dmaven.test.failure.ignore clean package"'''
       }
     }
   }
