@@ -7,7 +7,7 @@ pipeline {
 mvn -Dmaven.test.failure.ignore clean package'''
       }
     }
-    stage('') {
+    stage('Test') {
       steps {
         sh 'mvn test'
       }
